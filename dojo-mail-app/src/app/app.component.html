@@ -1,0 +1,18 @@
+<h1>Dojo Mail</h1>
+<table>
+
+    <thead>
+        <th>Email</th>
+        <th>Importance</th>
+        <th>Subject</th>
+        <th>Content</th>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let email of emails">
+            <td>{{email.email | lowercase}}</td>
+            <td>{{email.import | importtransform}}</td>
+            <td>{{email.subject}}</td>
+            <td>{{email.content}}</td>
+        </tr>
+    </tbody>
+</table>
