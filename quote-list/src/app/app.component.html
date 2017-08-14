@@ -1,0 +1,6 @@
+<h1>Add A Quote</h1>
+<app-form (createQuote)="addQuote($event)"></app-form>
+<h1>Quotes List</h1>
+<div *ngFor="let quote of quotes; index as i">
+    <app-list-item [quote]="quote" (votesUpdated)="rerankQuotes()" (deleteButtonPressed)="deleteQuote(i)"></app-list-item>
+</div>

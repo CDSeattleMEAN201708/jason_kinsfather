@@ -1,0 +1,10 @@
+<div>
+    <p>{{quote.text}}</p>
+    <p> - {{quote.author}}</p>
+</div>
+<h1>{{quote.voteToString()}}</h1>
+<ul>
+    <li><button (click)="quote.upvote(); updateQuoteRank()" type="button" name="button">Vote Up</button></li>
+    <li><button (click)="quote.downvote(); updateQuoteRank()" type="button" name="button">Vote Down</button></li>
+    <li><button (click)="deleteQuote()" type="button" name="button">Delete</button></li>
+</ul>
